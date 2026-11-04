@@ -4,10 +4,8 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Hero from "@/components/Hero";
 import InvitationCard from "@/components/InvitationCard";
-import Timeline from "@/components/Timeline";
 import Venue from "@/components/Venue";
 import Gallery from "@/components/Gallery";
-import RSVP from "@/components/RSVP";
 import LoveNote from "@/components/LoveNote";
 import MusicPlayer from "@/components/MusicPlayer";
 
@@ -54,20 +52,14 @@ export default function WeddingPage() {
             {/* မင်္ဂလာဖိတ်ကြားလွှာကတ် (မိဘများ၊ မောင်နှံအမည်များ) */}
             <InvitationCard />
 
-            {/* ကျေးဇူးတင်လွှာ */}
-            <LoveNote />
-
-            {/* အခမ်းအနား အစီအစဉ်များ */}
-            <Timeline />
-
             {/* မင်္ဂလာတည်နေရာ */}
             <Venue />
 
             {/* ဓာတ်ပုံများ */}
             <Gallery />
 
-            {/* ဆုမွန်ကောင်းတောင်းလွှာနှင့် RSVP */}
-            <RSVP />
+            {/* မေတ္တာဖြင့် အထူးကျေးဇူးတင်လွှာ */}
+            <LoveNote />
           </motion.div>
         )}
       </AnimatePresence>
