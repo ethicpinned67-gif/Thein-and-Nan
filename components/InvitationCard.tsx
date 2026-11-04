@@ -1,136 +1,85 @@
-import Image from "next/image";
+"use client";
+
+import { motion } from "framer-motion";
 
 export default function InvitationCard() {
   return (
-    <section className="flex justify-center items-center py-12 px-4 bg-[#fdfbf7]">
-      {/* Vintage Frame Card Box */}
-      <div className="relative max-w-lg w-full bg-[#fcfaf6] border-[6px] border-double border-[#2c2c2c] p-6 sm:p-10 text-center text-neutral-800 shadow-2xl rounded-sm">
-        
-        {/* Header Title */}
-        <h2 className="text-2xl sm:text-3xl font-bold tracking-wide text-neutral-900 mb-2">
-          မင်္ဂလာဧည့်ခံပွဲ ဖိတ်ကြားလွှာ
-        </h2>
+    <section className="bg-[#FAF8F5] px-4 py-16 sm:px-6 sm:py-24">
+      <div className="mx-auto max-w-xl">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="relative rounded-lg border-2 border-stone-800 bg-white px-6 py-12 text-center shadow-md sm:px-12 sm:py-16"
+        >
+          {/* အပြင်ဘောင် အလှလိုင်း (Double border effect) */}
+          <div className="pointer-events-none absolute inset-1.5 border border-stone-300" />
 
-        {/* Vintage Divider Ornament */}
-        <div className="flex justify-center items-center my-3 text-neutral-500">
-          <span className="h-[1px] w-12 bg-neutral-400"></span>
-          <span className="mx-3 text-sm">❦</span>
-          <span className="h-[1px] w-12 bg-neutral-400"></span>
-        </div>
+          {/* ထိပ်စီး ခေါင်းစဉ် */}
+          <h2 className="text-2xl font-bold tracking-wider text-stone-900 sm:text-3xl">
+            မင်္ဂလာဧည့်ခံပွဲ ဖိတ်ကြားလွှာ
+          </h2>
 
-        {/* Groom & Parents Section */}
-        <div className="text-sm sm:text-base leading-relaxed space-y-1 mb-5">
-          <p className="font-semibold text-neutral-900">(ဦးအောင်ချစ်) + (ဒေါ်ဖွား)၊</p>
-          <p className="font-semibold text-neutral-900">(ဦးဖိုးထွေး) + (ဒေါ်ထွေးခင်) တို့၏မြေး</p>
-          <p className="text-xs sm:text-sm text-neutral-600">ဟုမ္မလင်းခရိုင်၊ နမ့်တောမြို့နေ</p>
-          <p>(ဦးဝေလီ) + ဒေါ်မို့တင် (အောင်ကျော်ဇင်(၂)စတိုး) တို့၏သား</p>
-          <p className="text-xs sm:text-sm text-neutral-600">
-            မစိမ်းလဲဝါ (Nay Amara Hlaing Floral & surprise boxes service) ၏အစ်ကို
-          </p>
-          <h3 className="text-2xl font-bold py-2 text-neutral-900 tracking-wider">
-            မောင်ဖြိုးသက်ထွန်း
-          </h3>
-        </div>
+          <div className="my-6 mx-auto h-0.5 w-12 bg-stone-800" />
 
-        <p className="font-bold text-sm my-1 text-neutral-700">နှင့်</p>
-
-        {/* Bride & Parents Section */}
-        <div className="text-sm sm:text-base leading-relaxed space-y-1 mb-5">
-          <p className="font-semibold text-neutral-900">
-            (ဦးဝင်းဖေ) + (ဒေါ်သင်းသင်းလဲ့ (အ.လ.ပြ-ငြိမ်း)) တို့၏သမီး
-          </p>
-          <p className="text-xs sm:text-sm text-neutral-600">
-            ဦးအောင်ကျော်မိုး + ဒေါ်ဧကရီခိုင် (ဧကရာဇ်ကုမ္ပဏီ - Hena Export Shop) တို့၏ညီမ၊
-          </p>
-          <p className="text-xs sm:text-sm text-neutral-600">
-            ဦးစန်းရွှေ + ဒေါ်တင်တင်ဌေး၊ (အာမဟန် အုတ်သဲကျောက်ရောင်းဝယ်ရေး)၊ ဦးအောင်မဉ္ဇူ၊
-          </p>
-          <p className="text-xs sm:text-sm text-neutral-600">
-            ဦးအောင်ကျော်လင်း (SRS Shipping Co., Ltd) + ဒေါ်ဇင်ဇင်မြင့် (လ.ဝ.က-ငြိမ်း) တို့၏တူမ
-          </p>
-          <h3 className="text-2xl font-bold py-2 text-neutral-900 tracking-wider">
-            မအိမ့်ရွှေဖြူ
-          </h3>
-          <p className="text-xs sm:text-sm text-neutral-600 font-medium">
-            Bachelor of Economics (Statistics)
-          </p>
-          <p className="text-xs sm:text-sm text-neutral-600">
-            Assistant HR Manager (Hillman Land Co., Ltd.)
-          </p>
-        </div>
-
-        {/* Invitation Text */}
-        <p className="text-xs sm:text-sm text-neutral-700 my-4 leading-relaxed font-medium">
-          တို့၏ "မင်္ဂလာဧည့်ခံပွဲ" သို့ ကြွရောက်ချီးမြှင့်ပေးပါရန် နှစ်ဖက်မိဘများနှင့် မင်္ဂလာမောင်နှံတို့မှ ခင်မင်လေးစားစွာဖြင့် ဖိတ်ကြားအပ်ပါသည်။
-        </p>
-
-        {/* Ornament Line */}
-        <div className="flex justify-center items-center my-4 text-neutral-500">
-          <span className="h-[1px] w-16 bg-neutral-400"></span>
-          <span className="mx-2 text-xs">◆</span>
-          <span className="h-[1px] w-16 bg-neutral-400"></span>
-        </div>
-
-        {/* Date, Time & Venue */}
-        <div className="space-y-3 text-neutral-800">
-          <div className="flex items-center justify-center gap-2">
-            <span className="text-lg">📅</span>
-            <span className="font-bold tracking-wider text-base sm:text-lg">
-              28. NOVEMBER. 2026
-            </span>
-          </div>
-          <div className="flex items-center justify-center gap-2">
-            <span className="text-lg">🕒</span>
-            <span className="font-semibold text-sm sm:text-base text-neutral-700">
-              2:00 PM - 4:00 PM
-            </span>
-          </div>
-          <div className="pt-2">
-            <div className="flex items-center justify-center gap-1">
-              <span className="text-lg">📍</span>
-              <p className="font-bold text-sm sm:text-base text-neutral-900">
-                INYA LAKE HOTEL (Mingalar Ballrooms)
-              </p>
-            </div>
-            <p className="text-xs text-neutral-600 mt-0.5">
-              No.37, Kabar Aye Pagoda Road, Yangon
+          {/* သတို့သားဘက် မိဘအမည်များနှင့် နေရပ် */}
+          <div className="space-y-1 text-sm text-stone-700 sm:text-base">
+            <p className="font-semibold text-stone-900">
+              ဦးငယ်ငယ်ထွေး + ဒေါ်ခင်ကြည်ဝင်း
+            </p>
+            <p className="text-xs text-stone-600 sm:text-sm">
+              (မယိင်းကုန်စုံဆိုင်)
+            </p>
+            <p className="text-xs text-stone-500 sm:text-sm">
+              မိုးနဲမြို့၊ လွိုင်မြေရပ်ကွက်
+            </p>
+            <p className="pt-2 text-xs text-stone-600">
+              တို့၏ သား
             </p>
           </div>
-        </div>
 
-        {/* QR Code Section */}
-        <div className="grid grid-cols-2 gap-6 mt-8 pt-6 border-t border-dashed border-neutral-300">
-          <div className="flex flex-col items-center">
-            <div className="p-2 bg-white border border-neutral-300 rounded shadow-sm">
-              <Image 
-                src="/qr-rsvp.png" 
-                alt="RSVP QR Code" 
-                width={120} 
-                height={120} 
-                className="w-24 h-24 sm:w-28 sm:h-28 object-contain"
-              />
-            </div>
-            <span className="text-xs sm:text-sm font-bold mt-2 text-neutral-800 tracking-wider">
-              RSVP
-            </span>
+          {/* သတို့သား အမည် */}
+          <div className="my-4">
+            <h3 className="text-2xl font-bold tracking-wide text-stone-900 sm:text-3xl">
+              Thein Aye Maung
+            </h3>
           </div>
 
-          <div className="flex flex-col items-center">
-            <div className="p-2 bg-white border border-neutral-300 rounded shadow-sm">
-              <Image 
-                src="/qr-gift.png" 
-                alt="Gift QR Code" 
-                width={120} 
-                height={120} 
-                className="w-24 h-24 sm:w-28 sm:h-28 object-contain"
-              />
-            </div>
-            <span className="text-xs sm:text-sm font-bold mt-2 text-neutral-800 tracking-wider">
-              Gift
-            </span>
-          </div>
-        </div>
+          <p className="my-2 text-sm font-medium text-stone-600">
+            နှင့်
+          </p>
 
+          {/* သတို့သမီးဘက် မိဘအမည်များ */}
+          <div className="space-y-1 text-sm text-stone-700 sm:text-base">
+            <p className="font-semibold text-stone-900">
+              ဦးငယ်ငယ်ထွေး + ဒေါ်ခင်ကြည်ဝင်း
+            </p>
+            <p className="text-xs text-stone-600 sm:text-sm">
+              (မယိင်းကုန်စုံဆိုင်)၊ မိုးနဲမြို့
+            </p>
+            <p className="pt-2 text-xs text-stone-600">
+              တို့၏ သမီး
+            </p>
+          </div>
+
+          {/* သတို့သမီး အမည် */}
+          <div className="my-4">
+            <h3 className="text-2xl font-bold tracking-wide text-stone-900 sm:text-3xl">
+              Nan Su Myat Htwe
+            </h3>
+          </div>
+
+          {/* ဖိတ်ကြားလွှာ အောက်ခြေ စာသား */}
+          <p className="mt-8 text-xs leading-relaxed text-stone-600 sm:text-sm">
+            တို့၏ မင်္ဂလာဦးဆွမ်းကျွေး ဧည့်ခံပွဲ အခမ်းအနားသို့ ကြွရောက်ချီးမြှင့်ပေးပါရန် လေးစားစွာ ဖိတ်ကြားအပ်ပါသည်။
+          </p>
+
+          <div className="mt-6 border-t border-stone-200 pt-4 text-xs text-stone-500 sm:text-sm">
+            <p className="font-medium text-stone-800">၂၀၂၆ ခုနှစ်၊ ဒီဇင်ဘာလ ၅ ရက် (စနေနေ့)</p>
+            <p className="mt-0.5">နံနက် ၆:၀၀ နာရီ မှ ၇:၀၀ နာရီအထိ</p>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
