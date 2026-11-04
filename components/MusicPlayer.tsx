@@ -1,13 +1,14 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Volume2, VolumeX } from "lucide-react";
 
 export default function MusicPlayer() {
   const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    const audio = document.getElementById("bg-audio") as HTMLAudioElement | null;
+    const audio = audioRef.current;
     if (!audio) return;
 
     const handlePlay = () => setIsPlaying(true);
@@ -23,15 +24,17 @@ export default function MusicPlayer() {
   }, []);
 
   const toggleMusic = () => {
-    const audio = document.getElementById("bg-audio") as HTMLAudioElement | null;
+    const audio = audioRef.current;
     if (!audio) return;
 
     if (audio.paused) {
-      // ၁၀ စက္ကန့်အောက် ရောက်နေပါက ၁၀ စက္ကန့်သို့ တိုက်ရိုက်ကျော်ခိုင်းခြင်း
+      // ၁၀ စက္ကန့်မှ စဖွင့်ရန်
       if (audio.currentTime < 10) {
         audio.currentTime = 10;
       }
-      audio.play().catch((err) => console.log(err));
+      audio.play().catch((err) => {
+        console.error("Audio playback error:", err);
+      });
     } else {
       audio.pause();
     }
@@ -39,12 +42,18 @@ export default function MusicPlayer() {
 
   return (
     <div className="fixed bottom-6 right-6 z-50 flex items-center gap-3 rounded-full bg-white/90 px-4 py-2 shadow-lg backdrop-blur-md border border-stone-200">
-      // အသစ်ပြောင်းရမည့် စာကြောင်း
-      <audio id="bg-audio" src="/music.mp3?v=thein_nan_music" loop preload="auto" playsInline />
+      <audio
+        ref={audioRef}
+        src="/music.mp3?v=thein_nan_v1"
+        loop
+        preload="auto"
+        playsInline
+      />
 
       <span className="text-xs font-medium text-stone-700">
         {isPlaying ? "Playing our song" : "Tap to play our song"}
       </span>
+
       <button
         type="button"
         onClick={toggleMusic}
