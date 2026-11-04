@@ -34,7 +34,7 @@ export default function LoveNote() {
               မေတ္တာမင်္ဂလာအဖြာဖြာဖြင့်
             </p>
             <p className="font-display mt-1 text-sm italic text-stone-700 sm:text-base">
-              သိန်းအေးမောင် & နန်းစုမြတ်ထွေး
+              မောင်သိန်းအေးမောင် & နန်းစုမြတ်ထွေး
             </p>
           </div>
         </motion.div>
