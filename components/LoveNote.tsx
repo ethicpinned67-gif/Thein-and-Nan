@@ -4,32 +4,41 @@ import { motion } from "framer-motion";
 
 export default function LoveNote() {
   return (
-    <section className="py-20 px-6 bg-[#FAF7F2] text-center">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-        className="max-w-xl mx-auto rounded-2xl border border-amber-200/60 bg-white/60 p-8 sm:p-12 shadow-sm backdrop-blur-sm"
-      >
-        <span className="text-2xl mb-4 block">🤍</span>
-        <h3 className="font-serif text-2xl sm:text-3xl text-stone-800 tracking-wide font-light">
-          With Love & Appreciation
-        </h3>
+    <section className="bg-[#FAF8F5] px-4 py-16 sm:px-6 sm:py-20">
+      <div className="mx-auto max-w-xl">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="rounded-3xl border border-[#D4AF37]/20 bg-white p-8 text-center shadow-sm sm:p-12"
+        >
+          {/* အသဲပုံလေး */}
+          <div className="text-2xl">🤍</div>
 
-        <div className="w-12 h-px bg-[#D4AF37] mx-auto my-6" />
+          {/* အဓိက ခေါင်းစဉ် */}
+          <h2 className="font-display mt-4 text-2xl font-light text-stone-800 sm:text-3xl">
+            မေတ္တာဖြင့် အထူးကျေးဇူးတင်စွာဖြင့်
+          </h2>
 
-        <p className="text-stone-600 text-sm sm:text-base leading-relaxed tracking-wide font-light">
-          Our hearts are filled with gratitude for your love and blessings. It would mean so much to us to have you join us as we celebrate the beginning of our forever.
-        </p>
+          <div className="my-5 mx-auto h-px w-16 bg-[#B08C4A]/40" />
 
-        <p className="mt-8 text-xs sm:text-sm tracking-[0.2em] uppercase text-[#B8860B] font-medium">
-          With warmest love, <br className="sm:hidden" />
-          <span className="font-serif italic capitalize text-stone-700 tracking-normal text-base sm:text-lg">
-            The Bride & Groom
-          </span>
-        </p>
-      </motion.div>
+          {/* ကျေးဇူးတင်စကား အပိုဒ်တို */}
+          <p className="mx-auto max-w-md text-xs leading-relaxed text-stone-600 sm:text-sm sm:leading-7">
+            ကျွန်ုပ်တို့၏ မင်္ဂလာဦးဆွမ်းကျွေး အခမ်းအနားသို့ မေတ္တာစေတနာ အပြည့်ဖြင့် ကြွရောက်ချီးမြှင့်ပေးကြပါသော ချစ်ခင်လေးစားရပါသော မိဘဆွေမျိုး မိတ်သဟာယ အပေါင်းတို့အား လှိုက်လှဲစွာ အထူးကျေးဇူးတင်ရှိအပ်ပါသည်။
+          </p>
+
+          {/* အောက်ခြေ မောင်နှံစာသား */}
+          <div className="mt-8">
+            <p className="text-xs font-medium uppercase tracking-[0.18em] text-[#B08C4A]">
+              မေတ္တာမင်္ဂလာအဖြာဖြာဖြင့်
+            </p>
+            <p className="font-display mt-1 text-sm italic text-stone-700 sm:text-base">
+              သိန်းအေးမောင် & နန်းစုမြတ်ထွေး
+            </p>
+          </div>
+        </motion.div>
+      </div>
     </section>
   );
 }
