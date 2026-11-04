@@ -39,7 +39,7 @@ export default function InvitationCard() {
           {/* သတို့သား အမည် */}
           <div className="my-4">
             <h3 className="text-2xl font-bold tracking-wide text-stone-900 sm:text-3xl">
-              သိန်းအေးမောင်
+              မောင်သိန်းအေးမောင်
             </h3>
           </div>
 
