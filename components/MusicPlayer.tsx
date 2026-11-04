@@ -27,6 +27,10 @@ export default function MusicPlayer() {
     if (!audio) return;
 
     if (audio.paused) {
+      // ၁၀ စက္ကန့်အောက် ရောက်နေပါက ၁၀ စက္ကန့်သို့ တိုက်ရိုက်ကျော်ခိုင်းခြင်း
+      if (audio.currentTime < 10) {
+        audio.currentTime = 10;
+      }
       audio.play().catch((err) => console.log(err));
     } else {
       audio.pause();
@@ -35,9 +39,8 @@ export default function MusicPlayer() {
 
   return (
     <div className="fixed bottom-6 right-6 z-50 flex items-center gap-3 rounded-full bg-white/90 px-4 py-2 shadow-lg backdrop-blur-md border border-stone-200">
-      {/* တစ်ခုတည်းသော audio element */}
-      
-      <audio id="bg-audio" src="/music.mp3?v=new3" loop preload="auto" playsInline />
+      // အသစ်ပြောင်းရမည့် စာကြောင်း
+      <audio id="bg-audio" src="/music.mp3?v=thein_nan_music" loop preload="auto" playsInline />
 
       <span className="text-xs font-medium text-stone-700">
         {isPlaying ? "Playing our song" : "Tap to play our song"}
