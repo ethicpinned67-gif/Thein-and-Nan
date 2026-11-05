@@ -101,7 +101,7 @@ function celebrate() {
     (မယိင်းကုန်စုံဆိုင်)
   </p>
   <p className="text-xs text-white/75">
-    မိုးနဲမြို့၊ လွိုင်မြေရပ်ကွက်
+    လွိုင်မြေရပ်ကွက်၊ မိုးနဲမြို့
   </p>
 </div>
         <div className="my-5 h-px w-12 bg-[#D4AF37]/70 sm:my-8" />
