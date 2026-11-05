@@ -5,10 +5,10 @@ import { AnimatePresence, motion } from "framer-motion";
 import Hero from "@/components/Hero";
 import InvitationCard from "@/components/InvitationCard";
 import Venue from "@/components/Venue";
+import WeddingGift from "@/components/WeddingGift";
 import Gallery from "@/components/Gallery";
 import LoveNote from "@/components/LoveNote";
 import MusicPlayer from "@/components/MusicPlayer";
-import WeddingGift from "@/components/WeddingGift";
 
 export default function WeddingPage() {
   const [isOpen, setIsOpen] = useState(false);
@@ -56,14 +56,14 @@ export default function WeddingPage() {
             {/* မင်္ဂလာတည်နေရာ */}
             <Venue />
 
+            {/* မင်္ဂလာလက်ဖွဲ့ (Location အောက်တည့်တည့်သို့ ရွှေ့ထားခြင်း) */}
+            <WeddingGift />
+
             {/* ဓာတ်ပုံများ */}
             <Gallery />
 
             {/* မေတ္တာဖြင့် အထူးကျေးဇူးတင်လွှာ */}
             <LoveNote />
-
-            {/* မင်္ဂလာလက်ဖွဲ့ (KBZPay QR) */}
-            <WeddingGift />
           </motion.div>
         )}
       </AnimatePresence>
