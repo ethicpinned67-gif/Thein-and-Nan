@@ -9,6 +9,7 @@ import WeddingGift from "@/components/WeddingGift";
 import Gallery from "@/components/Gallery";
 import LoveNote from "@/components/LoveNote";
 import MusicPlayer from "@/components/MusicPlayer";
+import { Phone } from "lucide-react";
 
 export default function WeddingPage() {
   const [isOpen, setIsOpen] = useState(false);
@@ -56,7 +57,7 @@ export default function WeddingPage() {
             {/* မင်္ဂလာတည်နေရာ */}
             <Venue />
 
-            {/* မင်္ဂလာလက်ဖွဲ့ (Location အောက်တည့်တည့်သို့ ရွှေ့ထားခြင်း) */}
+            {/* မင်္ဂလာလက်ဖွဲ့ (Location အောက်) */}
             <WeddingGift />
 
             {/* ဓာတ်ပုံများ */}
@@ -64,6 +65,26 @@ export default function WeddingPage() {
 
             {/* မေတ္တာဖြင့် အထူးကျေးဇူးတင်လွှာ */}
             <LoveNote />
+
+            {/* အောက်ဆုံး Footer - Design By Suprise & Phone */}
+            <footer className="py-12 text-center border-t border-stone-200/60 bg-[#F7F3EC]/50">
+              <p className="font-serif italic text-sm tracking-widest text-stone-500">
+                Design By <span className="font-semibold text-stone-800 not-italic">Suprise</span>
+              </p>
+
+              {/* Design By Suprise အောက်ရှိ ဖုန်းနံပါတ် */}
+              <div className="mt-2.5">
+                <a
+                  href="tel:09970360380"
+                  className="inline-flex items-center gap-1.5 text-xs font-medium text-stone-500 hover:text-amber-800 transition-colors duration-200"
+                >
+                  <Phone className="h-3.5 w-3.5 text-amber-700/80" />
+                  <span>09-970360380</span>
+                </a>
+              </div>
+
+              <div className="mx-auto mt-4 h-0.5 w-6 bg-amber-600/25 rounded-full" />
+            </footer>
           </motion.div>
         )}
       </AnimatePresence>
