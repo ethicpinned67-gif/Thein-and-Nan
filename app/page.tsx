@@ -8,6 +8,7 @@ import Venue from "@/components/Venue";
 import Gallery from "@/components/Gallery";
 import LoveNote from "@/components/LoveNote";
 import MusicPlayer from "@/components/MusicPlayer";
+import WeddingGift from "@/components/WeddingGift";
 
 export default function WeddingPage() {
   const [isOpen, setIsOpen] = useState(false);
@@ -60,6 +61,9 @@ export default function WeddingPage() {
 
             {/* မေတ္တာဖြင့် အထူးကျေးဇူးတင်လွှာ */}
             <LoveNote />
+
+            {/* မင်္ဂလာလက်ဖွဲ့ (KBZPay QR) */}
+            <WeddingGift />
           </motion.div>
         )}
       </AnimatePresence>
