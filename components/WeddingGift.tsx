@@ -41,7 +41,7 @@ export default function WeddingGift() {
           </div>
 
           <p className="mt-4 text-xs font-medium text-stone-500">
-            DAW NANG SU MYAT HTWE[cite: 5]
+            DAW NANG SU MYAT HTWE
           </p>
         </motion.div>
       </div>
