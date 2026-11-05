@@ -24,7 +24,7 @@ export default function WeddingGift() {
             မင်္ဂလာလက်ဖွဲ့
           </h2>
           <p className="mt-2 text-xs leading-relaxed text-stone-600 sm:text-sm">
-            မင်္ဂလာမောင်နှံအား မင်္ဂလာလက်ဖွဲ့ မေတ္တာလက်ဆောင် ပေးပို့လိုပါက KBZPay ဖြင့် scan ဖတ်၍ ပေးပို့နိုင်ပါသည်[cite: 5]။
+            မင်္ဂလာမောင်နှံအား မင်္ဂလာလက်ဖွဲ့ မေတ္တာလက်ဆောင် ပေးပို့လိုပါက KBZPay ဖြင့် scan ဖတ်၍ ပေးပို့နိုင်ပါသည်။
           </p>
 
           <div className="my-5 mx-auto h-0.5 w-10 bg-amber-600/30 rounded-full" />
