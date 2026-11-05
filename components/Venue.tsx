@@ -1,63 +1,52 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Clock, Home, Calendar } from "lucide-react";
+import { MapPin, Navigation } from "lucide-react";
 
 export default function Venue() {
+  const mapUrl = "https://maps.app.goo.gl/BSdPjT4AawCFE8KZ6?g_st=iv";
+
   return (
-    <section id="venue" className="bg-[#F1EAE3] px-5 py-20 sm:px-8 sm:py-24">
-      <div className="mx-auto max-w-3xl text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="rounded-2xl border border-[#D4AF37]/30 bg-white p-8 shadow-sm sm:p-12"
-        >
-          <span className="text-xs uppercase tracking-[0.25em] text-[#B08C4A]">
-            Wedding Ceremony & Location
-          </span>
-          <h2 className="font-display mt-3 text-3xl font-light text-stone-800 sm:text-4xl">
-            မင်္ဂလာအခမ်းအနားနှင့် တည်နေရာ
-          </h2>
+    <section className="bg-[#FAF7F2] px-4 py-16 text-center sm:px-6 sm:py-24">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="mx-auto max-w-xl rounded-2xl border border-stone-200 bg-white p-8 shadow-sm sm:p-10"
+      >
+        <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-amber-50 text-amber-700">
+          <MapPin className="h-6 w-6" />
+        </div>
 
-          <div className="my-6 mx-auto h-px w-16 bg-[#B08C4A]/40" />
+        <h2 className="text-xl font-bold tracking-wide text-stone-900 sm:text-2xl">
+          မင်္ဂလာဧည့်ခံပွဲ တည်နေရာ
+        </h2>
 
-          <div className="mt-8 grid gap-6 text-left sm:grid-cols-2">
-            {/* အချိန်နှင့် နေ့ရက် */}
-            <div className="flex items-start gap-3 rounded-xl bg-[#FAF8F5] p-5 border border-stone-100">
-              <Calendar className="mt-1 h-5 w-5 shrink-0 text-[#B08C4A]" />
-              <div>
-                <h3 className="font-medium text-stone-800">နေ့ရက်နှင့် အချိန်</h3>
-                <p className="mt-1 text-sm text-stone-600">
-                  ၂၀၂၆ ခုနှစ်၊ ဒီဇင်ဘာလ ၅ ရက် (စနေနေ့)
-                </p>
-                <div className="mt-2 flex items-center gap-1.5 text-xs text-stone-500">
-                  <Clock className="h-3.5 w-3.5 text-[#B08C4A]" />
-                  <span>နံနက် ၆:၀၀ နာရီ မှ ၇:၀၀ နာရီအထိ</span>
-                </div>
-              </div>
-            </div>
+        <div className="my-4 mx-auto h-0.5 w-10 bg-amber-600/40" />
 
-            {/* တည်နေရာ လိပ်စာ */}
-            <div className="flex items-start gap-3 rounded-xl bg-[#FAF8F5] p-5 border border-stone-100">
-              <Home className="mt-1 h-5 w-5 shrink-0 text-[#B08C4A]" />
-              <div>
-                <h3 className="font-medium text-stone-800">ဖိတ်ကြားသည့် နေရပ်</h3>
-                <p className="mt-1 text-sm font-medium text-stone-700">
-                  ဦးငယ်ငယ်ထွေး + ဒေါ်ခင်ကြည်ဝင်း
-                </p>
-                <p className="text-xs text-stone-500 mt-0.5">
-                  (မယိင်းကုန်စုံဆိုင်)
-                </p>
-                <p className="mt-2 text-xs text-stone-600">
-                  မိုးနဲမြို့၊ လွိုင်မြေရပ်ကွက်
-                </p>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-      </div>
+        <div className="space-y-1 text-sm text-stone-600 sm:text-base">
+          <p className="font-medium text-stone-800">
+            ရှမ်းပြည်နယ်တောင်ပိုင်း၊ မိုးနဲမြို့နယ်၊ လွိုင်မြေရပ်ကွက်
+          </p>
+          <p className="text-xs text-stone-500 sm:text-sm">
+            ဦးငယ်ငယ်ထွေး + ဒေါ်ခင်ကြည်ဝင်း (မယိင်းကုန်စုံဆိုင်) တို့၏ နေအိမ်မင်္ဂလာသို့
+          </p>
+        </div>
+
+        {/* Google Maps ခလုတ် */}
+        <div className="mt-8">
+          <a
+            href={mapUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full bg-stone-900 px-6 py-3 text-xs font-semibold text-white shadow-md transition-all duration-200 hover:bg-stone-800 hover:shadow-lg sm:text-sm"
+          >
+            <Navigation className="h-4 w-4" />
+            <span>Google Maps ဖြင့် လမ်းညွှန်ကြည့်ရန်</span>
+          </a>
+        </div>
+      </motion.div>
     </section>
   );
 }
