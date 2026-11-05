@@ -115,7 +115,7 @@ export default function InvitationCard() {
             variants={itemVariants}
             className="mt-8 text-xs leading-relaxed text-stone-600 sm:text-sm"
           >
-            တို့၏ မင်္ဂလာဦးဆွမ်းကျွေး ဧည့်ခံပွဲ အခမ်းအနားသို့ ကြွရောက်ချီးမြှင့်ပေးပါရန် လေးစားစွာ ဖိတ်ကြားအပ်ပါသည်။
+            တို့၏ မင်္ဂလာဧည့်ခံပွဲ အခမ်းအနားသို့ ကြွရောက်ချီးမြှင့်ပေးပါရန် လေးစားစွာ ဖိတ်ကြားအပ်ပါသည်။
           </motion.p>
 
           {/* နေ့ရက်နှင့် အချိန် */}
